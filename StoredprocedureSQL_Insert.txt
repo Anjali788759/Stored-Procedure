@@ -1,0 +1,12 @@
+DELIMITER $$
+
+USE `1ejm10`$$
+
+DROP PROCEDURE IF EXISTS `insertdata`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertdata`(product_id INT,product_name VARCHAR (50),product_price DOUBLE,product_qty INT,product_cat VARCHAR(50))
+BEGIN
+INSERT INTO product VALUES (product_id,product_name,product_price,product_qty,product_cat);
+	END$$
+
+DELIMITER ;
